@@ -1,0 +1,179 @@
+/* src/DonutChart.css */
+
+.donut-chart {
+  width: 236px;
+  background-color: #eef6ef;
+  padding: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.donut-chart__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.donut-chart__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 24.2px;
+  color: #000000;
+}
+
+.donut-chart__info-icon {
+  height: 25.95px;
+  top: 18.61px;
+  left: 196.78px;
+  gap: 0px;
+  border-radius: 3.99px 0px 0px 0px;
+  opacity: 0px;
+  background-color: #EEF6EF;
+}
+
+.donut-chart__task-count {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38.73px;
+  color: #000000;
+  right: 40.61px;
+  margin-right: 200px;
+}
+
+.donut-chart__chart {
+  position: relative;
+  width: 151.57px;
+  height: 151.57px;
+}
+
+.donut-chart__chart-segment {
+  position: absolute;
+  width: 151.57px;
+  height: 151.57px;
+  top: 0;
+  left: 0;
+}
+
+.donut-chart__chart-segment-1 {
+  position: absolute;
+  width: 98px;
+  height: 80.57px;
+  top: 71px;
+  left: -9.5px;
+}
+
+.donut-chart__legend {
+  display: flex;
+  gap: 12px;
+  margin-right: 100px;
+  margin-top: 16px;
+}
+
+.donut-chart__legend-item {
+  display: flex;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14.52px;
+  color: #000000;
+}
+
+.donut-chart__legend-item img {
+  width: 5.98px;
+  height: 5.98px;
+  margin-right: 8px;
+}
+
+/* Dark mode styles */
+body.dark .donut-chart {
+  background-color: #333; /* Dark background */
+  color: #fff; /* Light text color */
+}
+
+body.dark .donut-chart__title,
+body.dark .donut-chart__task-count,
+body.dark .donut-chart__legend-item {
+  color: #fff; /* Light text color */
+}
+
+body.dark .donut-chart__info-icon {
+  background-color: #444; /* Darker background for the info icon */
+}
+
+body.dark .donut-chart__legend-item img {
+  filter: brightness(1.5); /* Brighten legend icons in dark mode */
+}
+
+/* Rest of your CSS */
+
+/* Dark mode variables for MainContent */
+body.dark .main-content {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .main-content__input {
+  background-color: #444;
+  border-color: #555;
+  color: #fff;
+}
+
+body.dark .main-content__icon {
+  filter: brightness(0.8);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap');
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding: 42px 20px;
+  background: linear-gradient(-1.76deg, rgba(53,121,55,0.1) 1.3%, rgba(208,255,210,0.1) 101.31%);
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  color: red;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.icons {
+  display: flex;
+  gap: 44px;
+}
+
+.icons img {
+  width: 24px;
+  height: 24px;
+}
+
+.add-task-container {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.16);
+  padding: 8px 16px;
+}
+
+.add-task-button {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #357937ff;
+  cursor: pointer;
+}

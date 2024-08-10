@@ -1,0 +1,120 @@
+.task-detail-container {
+    display: flex;
+    justify-content: center;
+    /* border: 2px red solid; */
+}
+
+.task-detail {
+    width: 452px;
+    background: #eef6ef;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.task-detail-header {
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    background: #eef6ef;
+    border-bottom: 1px solid rgba(73, 110, 75, 0.2);
+}
+
+.task-detail-header img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.task-detail-title {
+    flex-grow: 1;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1b281b;
+
+}
+
+.task-detail-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.task-detail-body {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 32px;
+    gap: 16px;
+}
+
+.task-detail-row {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(73, 110, 75, 0.2);
+}
+
+.task-detail-row-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+}
+
+.task-detail-row-label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1b281b;
+}
+
+.task-detail-add-notes {
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(73, 110, 75, 0.2);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    /* height: 490px; */
+    /* line-height: 590px; */
+    color: #1b281b96;
+}
+.addNotes {
+    text-decoration:none;
+  /* background-color: red ; */
+}
+.task-detail-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-top: 1px solid rgba(53, 121, 55, 0.6);
+    /* border: red 2px solid; */
+    margin-top: 470px;
+}
+
+.task-detail-footer img {
+    cursor: pointer;
+}
+
+.task-detail-footer span {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1b281b96;
+}
+.task-detail-datepicker {
+    
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: #000;
+    cursor: pointer;
+  }
+  
+  .task-detail-datepicker:focus {
+    outline: none;
+  }

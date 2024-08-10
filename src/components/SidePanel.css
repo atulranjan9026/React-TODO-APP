@@ -1,0 +1,83 @@
+/* src/SidePanel.css */
+
+.side-panel {
+    width: 280px;
+    height: 850px;
+    background: #eef6ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    padding-top: 72px;
+    margin: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-image {
+    width: 118px;
+    height: 118px;
+    border-radius: 50%; /* Ensures the image is circular */
+}
+
+.profile-label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1b281b;
+    margin-top: 10px;
+}
+
+.menu-section {
+    width: 240px;
+    padding: 24px 0;
+    background: #fbfdfc;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* border-radius: 82px; */
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: #fbfdfc;
+    /* border-radius: 8px; */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item.active,
+.menu-item:hover {
+    background: rgba(53, 121, 55, 0.15);
+}
+
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.menu-label {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #1b281b;
+}
+
+.menu-item.active .menu-label,
+.menu-item.active .menu-icon {
+    color: #357937;
+}
+
+.donut-chart-section {
+    width: 100%;
+    padding: 12px;
+}

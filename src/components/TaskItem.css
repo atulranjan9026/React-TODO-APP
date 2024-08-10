@@ -1,0 +1,92 @@
+/* Container for each task item */
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 32px;
+    border: 1.5px solid rgba(73, 110, 75, 0.2);
+    gap: 8px;
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #e0e0e0;
+    cursor: pointer;
+  }
+  
+  /* Task item when hovered */
+  .task-item:hover {
+    background-color: rgba(73, 110, 75, 0.1);
+  }
+  
+  /* Checkbox for marking task as completed */
+  .task-item__checkbox {
+    display: flex;
+    /* border: 2px rgb(83, 231, 224) solid; */
+  }
+  
+  /* Grid active state */
+  .task-item.grid-active .task-item__checkbox {
+    width: 40px;
+  }
+  
+  /* Specific styles for NotCompleted tasks when grid is active */
+  .task-item.NotCompleted.grid-active .task-item__checkbox {
+    width: 50px; /* Adjust this value as needed */
+  }
+  
+  /* Text content of the task */
+  .task-item__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Text of the task */
+  .task-item__text {
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: #1b281b;
+    cursor: pointer;
+    margin-left: 12px;
+    flex-grow: 1;
+  }
+  
+  /* Styling for the completed task */
+  .task-item.completed .task-item__text {
+    text-decoration: line-through;
+    color: #888;
+  }
+  
+  /* Star icon for marking task as important */
+  .task-item__star {
+    margin-left: auto;
+  }
+  
+  .task-item__icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+  }
+  
+  /* When hovering over the star icon */
+  .task-item__star:hover .task-item__icon {
+    opacity: 1;
+  }
+  
+  /* Dark mode support */
+  body.dark .task-item {
+    background-color: #444;
+    color: #fff;
+    border-bottom-color: #555;
+  }
+  
+  body.dark .task-item__text {
+    color: #ddd;
+  }
+  
+  body.dark .task-item.completed .task-item__text {
+    color: #888;
+  }
+  
