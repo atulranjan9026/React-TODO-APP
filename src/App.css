@@ -1,7 +1,6 @@
-/* General Styles */
+/* General Styles for all devices */
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -27,4 +26,242 @@ body.dark {
   background-color: #1f1f1f;
 }
 
-/* Add additional CSS for components as needed */
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 10px 20px;
+}
+
+.navbar__left,
+.navbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__icon {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__text {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Main Content Styles */
+.main-content {
+  width: 100%;
+  padding: 20px;
+  background-color: var(--background-color);
+  transition: all 0.3s ease;
+}
+
+.from {
+  border-top: 2px #559259 solid;
+}
+
+/* Grid layout for tasks */
+.main-tasks.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 15px;
+}
+
+/* Header styling */
+.main-content__header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.main-content__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.main-content__title-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--primary-text-color);
+}
+
+.main-content__title-text {
+  margin-right: 10px;
+}
+
+.main-content__icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.main-content__icon.open {
+  transform: rotate(180deg);
+}
+
+/* Input field for adding tasks */
+.main-content__add-task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-content__input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--background-color);
+}
+
+.main-content__input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.main-content__icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.main-content__icon {
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.main-content__icon:hover {
+  opacity: 0.7;
+}
+
+/* Tasks list styling */
+.main-content__tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Dark mode variables */
+body.dark .main-content {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark .main-content__input {
+  background-color: #444;
+  border-color: #555;
+  color: #fff;
+}
+
+body.dark .main-content__icon {
+  filter: brightness(0.8);
+}
+
+/* Task Item Styles */
+.task-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border: 1.5px solid rgba(73, 110, 75, 0.2);
+  gap: 8px;
+  background-color: #fff;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.task-item:hover {
+  background-color: rgba(73, 110, 75, 0.1);
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar__text {
+    font-size: 20px;
+  }
+
+  .main-content {
+    padding: 15px;
+  }
+
+  .main-content__title-button {
+    font-size: 20px;
+  }
+
+  .main-tasks.grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  .task-item {
+    padding: 12px 24px;
+  }
+
+  .task-item__text {
+    font-size: 18px;
+  }
+}
+
+/* Responsive Styles for Phones */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px;
+  }
+
+  .navbar__text {
+    font-size: 18px;
+  }
+
+  .main-content {
+    padding: 10px;
+  }
+
+  .main-content__title-button {
+    font-size: 18px;
+  }
+
+  .main-tasks.grid {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+
+  .task-item {
+    padding: 10px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item__text {
+    font-size: 16px;
+    margin-left: 0;
+  }
+
+  .main-content__input {
+    font-size: 14px;
+  }
+
+  .main-content__icons {
+    gap: 10px;
+  }
+}
